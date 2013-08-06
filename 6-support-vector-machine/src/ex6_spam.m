@@ -1,19 +1,10 @@
-%% Machine Learning Online Class
-%  Exercise 6 | Spam Classification with SVMs
-%
-%  Instructions
+%% Spam Classification with SVMs
+%  KeyFiles
 %  ------------
-% 
-%  This file contains code that helps you get started on the
-%  exercise. You will need to complete the following functions:
-%
 %     gaussianKernel.m
 %     dataset3Params.m
 %     processEmail.m
 %     emailFeatures.m
-%
-%  For this exercise, you will not need to change any code in this file,
-%  or any other files other than those mentioned above.
 %
 
 %% Initialization
@@ -21,10 +12,8 @@ clear ; close all; clc
 
 %% ==================== Part 1: Email Preprocessing ====================
 %  To use an SVM to classify emails into Spam v.s. Non-Spam, you first need
-%  to convert each email into a vector of features. In this part, you will
-%  implement the preprocessing steps for each email. You should
-%  complete the code in processEmail.m to produce a word indices vector
-%  for a given email.
+%  to convert each email into a vector of features. This part implements the preprocessing steps for each email. 
+%  and uses processEmail.m to produce a word indices vector for a given email.
 
 fprintf('\nPreprocessing sample email (emailSample1.txt)\n');
 
@@ -41,9 +30,8 @@ fprintf('Program paused. Press enter to continue.\n');
 pause;
 
 %% ==================== Part 2: Feature Extraction ====================
-%  Now, you will convert each email into a vector of features in R^n. 
-%  You should complete the code in emailFeatures.m to produce a feature
-%  vector for a given email.
+%  Convert each email into a vector of features in R^n. 
+%  Uses emailFeatures.m to produce a feature vector for a given email.
 
 fprintf('\nExtracting features from sample email (emailSample1.txt)\n');
 
@@ -96,7 +84,7 @@ pause;
 %% ================= Part 5: Top Predictors of Spam ====================
 %  Since the model we are training is a linear SVM, we can inspect the
 %  weights learned by the model to understand better how it is determining
-%  whether an email is spam or not. The following code finds the words with
+%  whether an email is spam or not. Following finds the words with
 %  the highest weights in the classifier. Informally, the classifier
 %  'thinks' that these words are the most likely indicators of spam.
 %
@@ -115,10 +103,10 @@ fprintf('\nProgram paused. Press enter to continue.\n');
 pause;
 
 %% =================== Part 6: Try Your Own Emails =====================
-%  Now that you've trained the spam classifier, you can use it on your own
+%  Having trained the spam classifier, it can be can used on your own
 %  emails! In the starter code, we have included spamSample1.txt,
 %  spamSample2.txt, emailSample1.txt and emailSample2.txt as examples. 
-%  The following code reads in one of these emails and then uses your 
+%  Following code reads in one of these emails and then uses your 
 %  learned SVM classifier to determine whether the email is Spam or 
 %  Not Spam
 
